@@ -1,0 +1,14 @@
+
+.card {
+    display: flex !important;
+   flex-wrap: wrap !important;
+}
+
+
+.search {
+    width: 300px;
+    margin-bottom: 100px;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
