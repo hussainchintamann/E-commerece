@@ -8,20 +8,20 @@ const ProductList = () => {
   const [search, setSearch] = useState(products);
   useEffect(() => {
     axios
-      // .get("https://dummyjson.com/products")
+     
       .get("https://dummyjson.com/products")
-
       .then((response) => {
-        setProducts(response.data);
-        setSearch(response.data);
+        setProducts(response.data.products);
+        setSearch(response.data.products);
+       
       })
       .catch((error) => console.error("fetchin data error", error));
   }, []);
 
   const Filter = (e) => {
     setSearch(
-      products.filter((filters) =>
-        filters.name.toLowerCase().includes(e.target.value)
+      search.filter((item) =>
+        item.title.toLowerCase().includes(e.target.value)
       )
     );
   };
@@ -44,15 +44,15 @@ const ProductList = () => {
         </form>
         <div className="row">
           {search.map((product) => (
-            <div className="col-4">
+            <div className="col-4" key={product.id}>
               <div
                 key={product.id}
                 style={{ width: "20rem" }}
                 class="card mb-5 "
               >
-                <img src={product.image} class="card-img-top" alt="..." />
+                <img src={product.thumbnail} class="card-img-top" alt="..." />
                 <div class="card-body">
-                  <h4 class="card-title">{product.name}</h4>
+                  <h4 class="card-title">{product.title}</h4>
                   
                   <Link
                     to={`/product/${product.id}`}

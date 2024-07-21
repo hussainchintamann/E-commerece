@@ -35,10 +35,9 @@ return (
       <div class="card-body">
         <h5 class="card-title">{product.name}</h5>
         <p class="card-text"><h5>Description</h5>{product.description}</p>
-        <p class="card-text"> <h5>Brand</h5> {product.brand}</p>
+        <p class="card-text"> <h5>Brand</h5> {product.category}</p>
         <p class="card-text"><h5>Rating</h5>{product.rating}</p>
-        <h3> Some Information </h3>
-        <p class="card-text"> {product.connectivity} {product.color} {product.storage_capacity} {product.interface} {product.display} {product.sensor}{product.battery_life} {product.suction_power} {product.ram} {product.output_power} {product.screen_size} {product.storage} {product.compatibility}</p>
+        <p class="card-text"> <h5>Stock</h5> {product.stock} </p>
         <p class="card-text"><h3>Price</h3>{product.price}</p>
         <Link to={'Addcart'}  class="btn btn-primary">Add to Cart</Link>
         

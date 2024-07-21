@@ -6,10 +6,11 @@ import  Navbar  from './components/navbar'
 import {Routes,Route} from  'react-router-dom'
 import  Home  from './components/Home'
 import ProductList  from './components/productlist'
-// import PostDetail from './components/productdetail'
+
 import ProductDetaile from './components/productdetail'
-// import Addcart from './components/cart'
-// import {ProductCart } from './components/cart'
+
+  
+
 
 const App =() => {
   
@@ -25,12 +26,12 @@ const App =() => {
       <Route path='product' element={<ProductList/>}/>
       <Route path='product/:productId' element={<ProductDetaile handleClick={handleClick}/>}/>
       {/* <Route path='Addcart' element={<Addcart/>}/> */}
-      {/* <Route path='product/:productId/:praoductCardId' element={<ProductCart/>}/> */}
+     
       
 
      </Routes>
-      
-    {/* <ProductCart/> */}
+    
+    
      
     </>
     
