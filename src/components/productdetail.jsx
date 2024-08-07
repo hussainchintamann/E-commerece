@@ -25,7 +25,7 @@ const ProductDetaile =()=>{
 return (
    
     <>
-    <div className="container d-flex pe-5 justify-content-center mt-5 ">
+    <div className="container d-flex pe-2 justify-content-center mt-5 ">
    <div class="card mb-3 border-light" style= {{maxWidth:'900px'}}>
   <div class="row g-0">
     <div class="col-md-5 ">
